@@ -59,3 +59,6 @@ This project is built using:
 - HTML5
 - CSS3 (Vanilla CSS with Variables and Flexbox/Grid)
 - JavaScript (Vanilla JS, no external libraries)
+
+## LIVE DEPLOYMENT : 
+
