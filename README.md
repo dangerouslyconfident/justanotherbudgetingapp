@@ -60,5 +60,6 @@ This project is built using:
 - CSS3 (Vanilla CSS with Variables and Flexbox/Grid)
 - JavaScript (Vanilla JS, no external libraries)
 
-## LIVE DEPLOYMENT : 
+## LIVE DEPLOYMENT : https://dangerouslyconfident.github.io/justanotherbudgetingapp/
+
 
