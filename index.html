@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POCKETDEPTH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-mesh"></div>
+
+    <div class="app-wrapper">
+        <header class="app-header">
+            <div class="brand">
+                <h1>POCKETDEPTH</h1>
+            </div>
+            <div class="controls">
+                <select id="currency-selector" class="currency-select">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="INR">INR (₹)</option>
+                    <option value="JPY">JPY (¥)</option>
+                </select>
+            </div>
+        </header>
+
+        <main class="main-grid">
+
+            <section class="panel hero-panel">
+                <div class="hero-content">
+                    <h4>Total Balance</h4>
+                    <h1 id="balance">$0.00</h1>
+                    <div class="daily-stat">
+                        <span>Today's Spend: </span>
+                        <span id="daily-spend" class="money minus">$0.00</span>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box income">
+                        <h4>Income</h4>
+                        <p id="money-plus" class="money plus">+$0.00</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-box expense">
+                        <h4>Expense</h4>
+                        <p id="money-minus" class="money minus">-$0.00</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="panel savings-panel">
+                <h3>Savings Goal</h3>
+                <div class="savings-content">
+                    <div class="savings-header">
+                        <span id="savings-text">0% reached</span>
+                        <div class="savings-input-group">
+                            <span>Target:</span>
+                            <input type="number" id="savings-goal" placeholder="1000">
+                        </div>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="savings-progress"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel chart-panel">
+                <h3>Expense Visualizer</h3>
+                <div class="chart-wrapper">
+                    <div class="pie-chart" id="expense-chart"></div>
+                    <div class="chart-legend" id="chart-legend"></div>
+                </div>
+            </section>
+
+
+            <section class="panel history-panel">
+                <div class="panel-header">
+                    <h3>Transaction History</h3>
+                    <button id="clear-btn" class="clear-btn" title="Clear All Data">Clear All</button>
+                </div>
+                <ul id="list" class="list">
+
+                </ul>
+            </section>
+
+            <section class="panel action-panel">
+                <h3>Add Transaction</h3>
+                <form id="form">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" id="text" placeholder="Enter description..." autocomplete="off">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="number" id="amount" placeholder="0.00" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="Income">Income</option>
+                            <option value="Food">Food</option>
+                            <option value="Housing">Housing</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary">Add Transaction</button>
+                    <small class="form-hint">Negative amounts are expenses.</small>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
